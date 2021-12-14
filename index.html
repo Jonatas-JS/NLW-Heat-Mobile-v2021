@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Mobile - Jonatas - DoWhile 2021</title>
+    <!-- chamei o CSS (Cascading Style Sheets) - style, 
+      rel=>relacional | stylesheet=>informanado que é CSS -->
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <main>
+      <div class="container">
+        <div class="avatar">
+          <span>
+            <img src="images/selo.svg" alt="Selo Rocketseat">
+          </span>
+          <img src="https://avatars.githubusercontent.com/u/69220608?v=4" width="185px" height="185px" alt="Foto perfil">
+        </div>
+
+        <h1 id="userName">Jonatas Fernandes</h1>
+        <a href="https://github.com/Jonatas-JS" target="_blank">
+          <img src="images/github.svg" alt="ícone github"/>
+          jonatasfernades</a>
+
+          <p>
+            A programmer focused on learning and always surpassing himself to reach the next level.
+          </p>
+
+          <ul id="socialLinks"> <!-- ul=>estrutura de lista não ordenada -->
+            <li class="youtube">
+              <a href="https://www.youtube.com/" target="_blank">
+              <img src="images/youtube.svg" alt="ícone youtube"/></a>
+              <!-- target=>alvo, página em branco -->
+            </li>
+            <li class="instagram">
+              <a href="https://www.instagram.com/" target="_blank">
+              <img src="images/instagram.svg" alt="ícone instagram"/></a>
+            </li>
+            <li class="facebook">
+              <a href="https://www.facebook.com/" target="_blank">
+              <img src="images/facebook.svg" alt="ícone facebook"/></a>
+            </li>
+            <li class="twitter">
+              <a href="https://twitter.com/" target="_blank">
+              <img src="images/twitter.svg" alt="ícone twitter"/></a>
+            </li>
+          </ul>
+      </div>
+    </main>
+    <script>
+      const linksSocialMedia = { // object=>conjunto de ações
+        github: 'Jonatas-JS',
+        youtube: 'playlist?list=PLLE8BCSjsKLmDC_mgui54yuygM6dCKkb-',
+        instagram: 'jonatasfernandesdasilva',
+        facebook: 'jonatas.fernandes.5836',
+        twitter: 'twitter'
+      }
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) { //criado ID=> <ul id="socialLinks">
+          const social = li.getAttribute('class') //criado as classes <li class="socialmidia">
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}` // uso da  crase pra o TemplateString possibilitando a utilização de variaveis por meio de ${variavel}
+          
+          // alert(li.children[0].href);
+        }
+      }
+    changeSocialMediaLinks();
+    </script>
+  </body>
+</html>
