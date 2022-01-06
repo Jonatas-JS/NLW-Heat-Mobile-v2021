@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 html, 
 body {
@@ -15,8 +17,10 @@ body {
   place-items: center;
 }
 main {
-  background: url(images/background.svg);
-  /* background: url(images/background02.png); */
+  /* background: url(images/background.svg); */
+  background: url(images/background02.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 375px;
   height: 100vh; /* vw | vh => unidade de medida de view-height(visualização no navegador), 1/100% da tela */
 }
